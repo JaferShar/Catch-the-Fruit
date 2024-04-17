@@ -471,7 +471,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasd
+  m_Text: Combo
 --- !u!222 &595076210
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -496,8 +496,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -451.33, y: 436}
-  m_SizeDelta: {x: 438.0072, y: 225.2695}
+  m_AnchoredPosition: {x: -340.44, y: 436}
+  m_SizeDelta: {x: 659.78, y: 225.2695}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &606322814
 GameObject:
@@ -663,8 +663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -451.33087, y: 160.09772}
-  m_SizeDelta: {x: 438.0072, y: 225.2695}
+  m_AnchoredPosition: {x: -340.44214, y: 160.09772}
+  m_SizeDelta: {x: 659.7848, y: 225.2695}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &635595563
 MonoBehaviour:
@@ -699,7 +699,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dasd
+  m_Text: Score
 --- !u!222 &635595564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 978254377}
   - component: {fileID: 978254376}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Lifebar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
