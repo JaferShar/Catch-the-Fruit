@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public class HealthManager : MonoBehaviour
 {
 
+    public static HealthManager instance;
     public UnityEngine.UI.Image healthbar;
     public float health = 100f;
     public float damageAmount = 10f;
@@ -17,11 +18,18 @@ public class HealthManager : MonoBehaviour
 
     private float currVelocity = 0f;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
-
     // Update is called once per frame
     void Update()
     {
