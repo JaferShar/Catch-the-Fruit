@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour
     public Text comboText;
 
     private int score = 0;
-    private int combo = 0;
+    private int combo = 1;
     private readonly int bigCollPoints = 30;
     private readonly int collPoints = 5;
 
