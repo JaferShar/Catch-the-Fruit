@@ -58,4 +58,9 @@ public class ScoreManager : MonoBehaviour
         combo = 0;
         comboText.text = "";
     }
+
+    public int GetCombo() 
+    {
+        return combo;
+    }
 }
