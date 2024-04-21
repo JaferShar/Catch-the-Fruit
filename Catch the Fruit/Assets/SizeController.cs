@@ -27,7 +27,7 @@ public class SizeController : MonoBehaviour
             playerImage.transform.localScale = new Vector3(scaleSize, 1, 1);
         }
 
-        if (scoreManager.GetCombo() == 1) {
+        if (scoreManager.GetCombo() == 0) {
             scaleSize = 1.0f;
             multipleOf = 1;
             playerImage.transform.localScale = new Vector3(1, 1, 1);
