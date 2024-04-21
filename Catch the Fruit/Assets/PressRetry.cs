@@ -7,6 +7,6 @@ public class PressRetry : MonoBehaviour
 {
     public void RetryGame()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadScene(1);
     }
 }

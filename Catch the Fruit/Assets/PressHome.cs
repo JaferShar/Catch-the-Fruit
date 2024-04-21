@@ -8,6 +8,6 @@ public class PressHome : MonoBehaviour
     
     public void Home()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadScene(0);
     }
 }

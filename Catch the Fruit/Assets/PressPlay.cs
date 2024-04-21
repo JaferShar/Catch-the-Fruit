@@ -8,7 +8,6 @@ public class PressPlay : MonoBehaviour
 {
    public void PlayGame()
    {
-       SceneManager.LoadSceneAsync(1);
-       Debug.Log("Play Game");
+       SceneManager.LoadScene(1);
    }
 }
