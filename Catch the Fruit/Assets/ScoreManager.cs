@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
 
-    public static ScoreManager instance;
     
     public Text scoreText;
     public Text comboText;
@@ -21,16 +20,6 @@ public class ScoreManager : MonoBehaviour
     {
         comboText.text = "";
         scoreText.text = 0.ToString();
-    }
-
-    private void Awake()
-    {
-        if (instance == null) {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        } else {
-            Destroy(gameObject);
-        }
     }
 
     public void PickupBigColl() 
