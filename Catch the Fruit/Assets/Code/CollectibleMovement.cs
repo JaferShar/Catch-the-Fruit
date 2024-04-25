@@ -7,17 +7,17 @@ public class NewBehaviourScript : MonoBehaviour
 {
     public float moveSpeed = 0.01f;
     public GameObject player;
-    private new Transform transform;
+    private Rigidbody2D rb;
     // Start is called before the 
     void Start()
     {
-        transform = GetComponent<Transform>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position -= new Vector3(0, moveSpeed, 0);
+        rb.velocity = new Vector2(0, -moveSpeed);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
