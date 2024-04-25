@@ -20,8 +20,8 @@ public class Generate : MonoBehaviour
     private List<GameObject> damageColls = new List<GameObject>();
 
     private int normalPoolSize = 30;
-    private int bigPoolSize = 10;
-    private int damagePoolSize = 10;    
+    //private int bigPoolSize = 10;
+    //private int damagePoolSize = 10;    
 
     private void Awake()
     {
@@ -44,8 +44,8 @@ public class Generate : MonoBehaviour
     void Start()
     {
         instantiateCollectibles(normalColls, normalCollectible, normalPoolSize);
-        instantiateCollectibles(bigColls, bigCollectible, bigPoolSize);
-        instantiateCollectibles(damageColls, damageCollectible, damagePoolSize);
+        //instantiateCollectibles(bigColls, bigCollectible, bigPoolSize);
+        //instantiateCollectibles(damageColls, damageCollectible, damagePoolSize);
     }
 
     private GameObject GetCollectible(List<GameObject> normalColls)
@@ -77,22 +77,23 @@ public class Generate : MonoBehaviour
         }
         else
         {
-            int chance = Random.Range(1, 100);
+            //int chance = Random.Range(1, 100);
             float positionX = Random.Range(leftBorder.position.x, rightBorder.position.x);
             float positionY = topBorder.position.y;
             Vector3 position = new Vector3(positionX, positionY, 0);
 
-            if (chance <= 10) 
-            {
-                generateCollectible(GetCollectible(damageColls), position);
-            } else if (chance <= 20)
-            {
-                generateCollectible(GetCollectible(bigColls), position);
-            } else
-            {
-                generateCollectible(GetCollectible(normalColls), position);
-            }
-
+            // if (chance <= 10) 
+            // {
+            //     generateCollectible(GetCollectible(damageColls), position);
+            // } else if (chance <= 20)
+            // {
+            //     generateCollectible(GetCollectible(bigColls), position);
+            // } else
+            // {
+            //     generateCollectible(GetCollectible(normalColls), position);
+            // }
+            generateCollectible(GetCollectible(normalColls), position);
+            
             timer = 0.7f;
         }
     }
