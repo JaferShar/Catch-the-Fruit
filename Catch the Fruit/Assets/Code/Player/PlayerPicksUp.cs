@@ -3,14 +3,28 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PicksUp : MonoBehaviour
+public class PlayerPicksUp : MonoBehaviour
 {
+    public HealthManager healthManager;
+    public ScoreManager scoreManager;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "DamageCollectible")
+        switch (collision.gameObject.tag)
         {
-            Debug.Log("Player picked up a damage!");
-            
+            case "DamageCollectible":
+                scoreManager.ResetCombo();
+                healthManager.TakeDamage();
+                break;
+            case "Collectible":
+                scoreManager.PickupColl();
+                healthManager.Heal();
+                break;
+            case "BigCollectible":
+                scoreManager.PickupBigColl();
+                healthManager.Heal();
+                break;
+            default:
+                break;
         }
     }
 }
