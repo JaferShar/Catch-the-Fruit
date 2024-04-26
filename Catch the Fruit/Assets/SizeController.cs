@@ -20,7 +20,7 @@ public class SizeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (scoreManager.GetCombo() == 20 * multipleOf) {
+        if (scoreManager.GetCombo() == 20 * multipleOf && scoreManager.GetCombo() <= 160) {
             scaleSize -= 0.1f;
             multipleOf++;
             playerImage.transform.localScale = new Vector3(scaleSize, 1, 1);
