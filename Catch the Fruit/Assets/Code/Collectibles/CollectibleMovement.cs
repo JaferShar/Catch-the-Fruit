@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class CollectibleMovement : MonoBehaviour
 {
     public float moveSpeed = 0.01f;
     public GameObject player;

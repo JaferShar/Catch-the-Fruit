@@ -15,6 +15,7 @@ public class PlayerPicksUp : MonoBehaviour
                 scoreManager.ResetCombo();
                 healthManager.TakeDamage();
                 break;
+                //old value = "Collectible"
             case "Collectible":
                 scoreManager.PickupColl();
                 healthManager.Heal();
