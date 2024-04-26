@@ -47,6 +47,9 @@ TagManager:
   - name: Background
     uniqueID: 3770778821
     locked: 0
+  - name: Frame
+    uniqueID: 2398460183
+    locked: 0
   - name: Collectible
     uniqueID: 2933970509
     locked: 0
