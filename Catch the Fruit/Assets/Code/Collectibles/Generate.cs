@@ -48,13 +48,13 @@ public class Generate : MonoBehaviour
         //instantiateCollectibles(damageColls, damageCollectible, damagePoolSize);
     }
 
-    private GameObject GetCollectible(List<GameObject> normalColls)
+    private GameObject GetCollectible(List<GameObject> colls)
     {
-        for (int i = 0; i < normalColls.Count; i++)
+        for (int i = 0; i < colls.Count; i++)
         {
-            if (!normalColls[i].activeInHierarchy)
+            if (!colls[i].activeInHierarchy)
             {
-                return normalColls[i];
+                return colls[i];
             }
         }
 

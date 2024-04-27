@@ -7,6 +7,7 @@ public class PlayerPicksUp : MonoBehaviour
 {
     public HealthManager healthManager;
     public ScoreManager scoreManager;
+    public PopupTextManager popupTextManager;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.gameObject.tag)
@@ -19,6 +20,7 @@ public class PlayerPicksUp : MonoBehaviour
             case "Collectible":
                 scoreManager.PickupColl();
                 healthManager.Heal();
+                popupTextManager.ShowPopupText(collision.transform.position);
                 break;
             case "BigCollectible":
                 scoreManager.PickupBigColl();
