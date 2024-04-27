@@ -13,7 +13,7 @@ public class PopupTextManager : MonoBehaviour
     public float DestroyTime;
 
     private List<GameObject> popupTexts = new List<GameObject>();
-    private int poolSize = 5;
+    private int poolSize = 10;
 
     private void Awake()
     {
