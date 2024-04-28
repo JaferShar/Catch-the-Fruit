@@ -14,6 +14,7 @@ public class HealthManager : MonoBehaviour
     public float healAmount = 10f;
 
     private float currVelocity = 0f;
+    private static int retries = 1;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +24,13 @@ public class HealthManager : MonoBehaviour
         healthbar.fillAmount = health / 100f;
         if (health <= 0)
         {
-            SceneManager.LoadSceneAsync("GameOver");
+            if (retries > 0)
+            {
+                retries--;
+                SceneManager.LoadScene("GameOver");
+            } else {
+                SceneManager.LoadScene("Home");
+            }
         }
     }
 
