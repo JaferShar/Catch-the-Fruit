@@ -5,23 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ManageScenes : MonoBehaviour
 {
-
-    public static ManageScenes instance;
-    private void Awake()
-    {
-        if (instance == null) {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        } else {
-            Destroy(gameObject);
-        }
-    }
+    private static List<int> levels = new() {1, 2, 3, 4};
     public void PressPlay() {
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void LoadScene(string sceneName) 
-    {
-        SceneManager.LoadSceneAsync(sceneName);
+        int randomNumber = Random.Range(0, levels.Count - 1);
+        int randomLevel = levels[randomNumber];
+        levels.Remove(randomNumber);
+        SceneManager.LoadSceneAsync(randomLevel);
     }
 }

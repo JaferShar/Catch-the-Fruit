@@ -23,7 +23,7 @@ public class HealthManager : MonoBehaviour
         healthbar.fillAmount = health / 100f;
         if (health <= 0)
         {
-            SceneManager.LoadSceneAsync(2);
+            SceneManager.LoadSceneAsync("GameOver");
         }
     }
 

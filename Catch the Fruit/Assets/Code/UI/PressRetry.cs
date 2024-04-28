@@ -5,8 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class PressRetry : MonoBehaviour
 {
+    public static int retries = 1;
     public void RetryGame()
     {
-        SceneManager.LoadScene(1);
+        if (retries > 0) {
+            retries--;
+            SceneManager.LoadScene(1);
+        } else {
+            Debug.Log("No more retries");
+            SceneManager.LoadScene(0);
+        }
+        
     }
 }
