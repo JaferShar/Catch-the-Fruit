@@ -6,7 +6,6 @@ using UnityEngine;
 public class CollectibleMovement : MonoBehaviour
 {
     public float moveSpeed = 0.01f;
-    public GameObject player;
     private Rigidbody2D rb;
     // Start is called before the 
     void Start()
@@ -20,11 +19,4 @@ public class CollectibleMovement : MonoBehaviour
         rb.velocity = new Vector2(0, -moveSpeed);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.name == "Player" || collision.gameObject.name == "BottomFrame") 
-        {
-            gameObject.SetActive(false);
-        }
-    }
 }

@@ -29,5 +29,6 @@ public class PlayerPicksUp : MonoBehaviour
             default:
                 break;
         }
+        collision.gameObject.SetActive(false);
     }
 }

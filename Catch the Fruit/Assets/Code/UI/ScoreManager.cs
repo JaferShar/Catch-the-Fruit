@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     public Text comboText;
 
     private int score = 0;
-    private int combo = 1;
+    private int combo = 0;
     private readonly int bigCollPoints = 30;
     private readonly int collPoints = 5;
 
@@ -24,14 +24,14 @@ public class ScoreManager : MonoBehaviour
 
     public void PickupBigColl() 
     {
-        score += bigCollPoints * combo;
+        score += bigCollPoints * (combo + 1);
         scoreText.text = score.ToString();
         AddCombo();
     }
 
     public void PickupColl() 
     {
-        score += collPoints * combo;
+        score += collPoints * (combo + 1);
         scoreText.text = score.ToString();
         AddCombo();
     }
