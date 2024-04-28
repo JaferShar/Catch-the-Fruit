@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    float timeRemaining = 61f;
+    float timeRemaining = 5f;
     // Update is called once per frame
     void Update()
     {
@@ -19,6 +20,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
+            SceneManager.LoadScene("Home");
             timerText.text = "00:00";
         }
     }
