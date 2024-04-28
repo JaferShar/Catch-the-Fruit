@@ -28,6 +28,7 @@ public class HealthManager : MonoBehaviour
             {
                 retries--;
                 SceneManager.LoadScene("GameOver");
+                PlayerPrefs.SetInt("GameVersion", SceneManager.GetActiveScene().buildIndex);
             } else {
                 SceneManager.LoadScene("Home");
             }
