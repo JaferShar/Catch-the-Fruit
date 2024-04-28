@@ -22,7 +22,7 @@ public class CollectibleMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player" || collision.gameObject.name == "BorderBottom") 
+        if (collision.gameObject.name == "Player" || collision.gameObject.name == "BottomFrame") 
         {
             gameObject.SetActive(false);
         }
