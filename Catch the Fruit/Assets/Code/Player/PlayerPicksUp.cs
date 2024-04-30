@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerPicksUp : MonoBehaviour
 {
-    public HealthManager healthManager;
+    public IHealthManager healthManager;
     public ScoreManager scoreManager;
     public PopupTextManager popupTextManager;
     private void OnTriggerEnter2D(Collider2D collision)

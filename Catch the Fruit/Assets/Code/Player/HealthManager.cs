@@ -6,9 +6,9 @@ using DG.Tweening;
 using UnityEngine.SceneManagement;
 
 
-public class HealthManager : MonoBehaviour
+public class HealthManager : IHealthManager 
 {
-    public UnityEngine.UI.Image healthbar;
+    public Image healthbar;
     public float health = 100f;
     public float damageAmount = 10f;
     public float healAmount = 10f;
@@ -30,18 +30,19 @@ public class HealthManager : MonoBehaviour
                 SceneManager.LoadScene("GameOver");
                 PlayerPrefs.SetInt("GameVersion", SceneManager.GetActiveScene().buildIndex);
             } else {
+                retries = 1;
                 SceneManager.LoadScene("Home");
             }
         }
     }
 
-    public void TakeDamage() 
+    public override void TakeDamage() 
     {
         health -= damageAmount;
         healthbar.fillAmount = health / 100f;
     }
 
-    public void Heal()
+    public override void Heal()
     {
         health += healAmount;
         health = Mathf.Clamp(health, 0, 100);
