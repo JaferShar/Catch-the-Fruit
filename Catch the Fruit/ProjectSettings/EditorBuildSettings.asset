@@ -23,4 +23,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: eea48d74fad1c21439e023762564774a
+  - enabled: 1
+    path: Assets/Scenes/FillForm1.unity
+    guid: 02d09ad66bb39f448939e308e4d42678
+  - enabled: 1
+    path: Assets/Scenes/FillForm2.unity
+    guid: eea7be636b85cf8438394824447e1f57
+  - enabled: 1
+    path: Assets/Scenes/FillForm3.unity
+    guid: d141bfc2bfd76fe43a639d733756937c
+  - enabled: 1
+    path: Assets/Scenes/FillForm4.unity
+    guid: c5796bc9f3bf76248bdb024b2ffc7f20
+  - enabled: 1
+    path: Assets/Scenes/ThankYou.unity
+    guid: fadfb24429ae69347bf7ceb58a3aff37
   m_configObjects: {}

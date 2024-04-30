@@ -31,7 +31,7 @@ public class HealthManager : IHealthManager
                 PlayerPrefs.SetInt("GameVersion", SceneManager.GetActiveScene().buildIndex);
             } else {
                 retries = 1;
-                SceneManager.LoadScene("Home");
+                SceneManager.LoadScene("FillForm" + SceneManager.GetActiveScene().buildIndex);
             }
         }
     }

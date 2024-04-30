@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Home");
+            SceneManager.LoadScene("FillForm" + SceneManager.GetActiveScene().buildIndex);
             timerText.text = "00:00";
         }
     }
