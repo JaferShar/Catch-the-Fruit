@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.Pool;
+using Vector3 = UnityEngine.Vector3;
 
 public class Generate : MonoBehaviour
 {
@@ -16,10 +18,11 @@ public class Generate : MonoBehaviour
 
     private float timer = 1;
     private List<GameObject> normalColls = new List<GameObject>();
-    private List<GameObject> bigColls = new List<GameObject>();
-    private List<GameObject> damageColls = new List<GameObject>();
+    // private List<GameObject> bigColls = new List<GameObject>();
+    // private List<GameObject> damageColls = new List<GameObject>();
 
-    private int normalPoolSize = 30;
+    private int normalPoolSize = 10;
+    private UnityEngine.Vector3 lastPosition;
     //private int bigPoolSize = 10;
     //private int damagePoolSize = 10;    
 
@@ -78,12 +81,36 @@ public class Generate : MonoBehaviour
         else
         {
             //int chance = Random.Range(1, 100);
-            float positionX = Random.Range(leftBorder.position.x, rightBorder.position.x);
-            float positionY = topBorder.position.y;
-            Vector3 position = new Vector3(positionX, positionY, 0);
-            generateCollectible(GetCollectible(normalColls), position);
+            
+            generateCollectible(GetCollectible(normalColls), GetRandomPosition());
             
             timer = 0.7f;
         }
+    }
+
+    private Vector3 GetRandomPosition()
+    {
+        Vector3 newPosition;
+        if (lastPosition == null)
+        {
+            lastPosition = GenerateRandomPosition();
+            newPosition = lastPosition;
+        } else 
+        {
+            do 
+            {
+                newPosition = GenerateRandomPosition();
+            } while (Vector3.Distance(newPosition, lastPosition) < 3f);
+            lastPosition = newPosition;
+        }
+        
+
+        return  newPosition;
+    }
+
+    private Vector3 GenerateRandomPosition() {
+        float positionX = Random.Range(leftBorder.position.x, rightBorder.position.x);
+        float positionY = topBorder.position.y;
+        return new Vector3(positionX, positionY, 0);
     }
 }
