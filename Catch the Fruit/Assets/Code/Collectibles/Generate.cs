@@ -81,17 +81,6 @@ public class Generate : MonoBehaviour
             float positionX = Random.Range(leftBorder.position.x, rightBorder.position.x);
             float positionY = topBorder.position.y;
             Vector3 position = new Vector3(positionX, positionY, 0);
-
-            // if (chance <= 10) 
-            // {
-            //     generateCollectible(GetCollectible(damageColls), position);
-            // } else if (chance <= 20)
-            // {
-            //     generateCollectible(GetCollectible(bigColls), position);
-            // } else
-            // {
-            //     generateCollectible(GetCollectible(normalColls), position);
-            // }
             generateCollectible(GetCollectible(normalColls), position);
             
             timer = 0.7f;

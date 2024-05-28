@@ -11,8 +11,12 @@ public class ScoreManager : MonoBehaviour
     public Text scoreText;
     public Text comboText;
 
+    public static int maxScore = 0;
+    public static int maxCombo = 0;
     private int score = 0;
     private int combo = 0;
+
+    
     private readonly int bigCollPoints = 30;
     private readonly int collPoints = 5;
 
@@ -20,6 +24,8 @@ public class ScoreManager : MonoBehaviour
     {
         comboText.text = "";
         scoreText.text = 0.ToString();
+        maxScore = 0;
+        maxCombo = 0;
     }
 
     public void PickupBigColl() 
@@ -32,6 +38,10 @@ public class ScoreManager : MonoBehaviour
     public void PickupColl() 
     {
         score += collPoints * (combo + 1);
+        if (score > maxScore) 
+        {
+            maxScore = score;
+        }
         scoreText.text = score.ToString();
         AddCombo();
     }
@@ -39,6 +49,10 @@ public class ScoreManager : MonoBehaviour
     private void AddCombo() 
     {
         combo++;
+        if (combo > maxCombo) 
+        {
+            maxCombo = combo;
+        }
         comboText.text = "x" + combo.ToString();
     }
 
@@ -52,4 +66,5 @@ public class ScoreManager : MonoBehaviour
     {
         return combo;
     }
+
 }
