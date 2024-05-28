@@ -100,7 +100,7 @@ public class Generate : MonoBehaviour
             do 
             {
                 newPosition = GenerateRandomPosition();
-            } while (Vector3.Distance(newPosition, lastPosition) < 3f);
+            } while (Vector3.Distance(newPosition, lastPosition) < 2f);
             lastPosition = newPosition;
         }
         
