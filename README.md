@@ -1,5 +1,5 @@
 # Catch-the-Fruit
-A dame developed for a study on player experience
+A game developed for a study on player experience
 
 # Set up
 Clone the project onto your own storage.
