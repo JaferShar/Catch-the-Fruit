@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerText;
-    private static float timeRemaining = 120f;
+    private static float timeRemaining = 5f;
     // Update is called once per frame
 
     void Update()
@@ -28,6 +28,6 @@ public class Timer : MonoBehaviour
 
     public static void ResetTimer()
     {
-        timeRemaining = 120f;
+        timeRemaining = 5f;
     }
 }
