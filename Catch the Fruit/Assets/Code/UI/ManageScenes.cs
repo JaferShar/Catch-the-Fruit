@@ -11,7 +11,7 @@ public class ManageScenes : MonoBehaviour
             SceneManager.LoadScene("ThankYou");
         } else {    
             Timer.ResetTimer();
-            int randomNumber = Random.Range(0, levels.Count - 1);
+            int randomNumber = Random.Range(0, levels.Count);
             int randomLevel = levels[randomNumber];
             levels.Remove(randomLevel);
             SceneManager.LoadSceneAsync(randomLevel);
